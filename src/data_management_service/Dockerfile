@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
-EXPOSE 10000
+ARG DATA_DIR=/app/data
+
+EXPOSE 10001
 
 RUN apt-get update
 RUN apt-get upgrade -y
@@ -10,9 +12,8 @@ RUN python3 -m pip install --upgrade pip
 RUN pip install fastapi 
 RUN pip install uvicorn 
 RUN pip install pandas 
-RUN pip install requests
-RUN pip install python-multipart
-RUN pip install schedule
+RUN pip install requests 
 
+ENV DATA_DIR=$DATA_DIR
 WORKDIR /app
 CMD ["python3", "-u", "server.py"]
