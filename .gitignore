@@ -1,0 +1,3 @@
+*__pycache__*
+src\data_management_service\data\*
+!src\data_management_service\data\.gitkeep
