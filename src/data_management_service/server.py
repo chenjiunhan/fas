@@ -40,7 +40,7 @@ def save_kline(kline_data: KlineData, response: Response):
 
 @app.get("/data_manager/binance/kline")
 def get_kline(symbol: str, response: Response):
-
+    
     result = binance_dm.get_kline_csv(symbol)
 
     if result:
@@ -62,7 +62,7 @@ def get_kline(symbol: str, response: Response):
 
 @app.post("/data_manager/binance/mined_kline_data")
 def save_mined_kline_data(mined_kline_data: MinedKlineData, response: Response):
-
+    
     result = binance_dm.save_mined_kline_data_csv(mined_kline_data.filename, mined_kline_data.mined_kline_data)
 
     if result:

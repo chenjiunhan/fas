@@ -1,5 +1,4 @@
-# FAS
-Financial AI System
+# Financial AI System (FAS)
 
 ## Requirements
 * docker
