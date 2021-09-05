@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-EXPOSE 10000
+EXPOSE 10003
 
 RUN apt-get update
 RUN apt-get upgrade -y
