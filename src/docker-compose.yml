@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  data_collector:
+    container_name: data_collector
+    build: ./data_collection_service
+    restart: always
+    networks:
+      - fas
+    ports:
+      - "10000:10000"
+    volumes:
+      - ./data_collection_service:/app
+  data_manager:
+    container_name: data_manager
+    build: ./data_management_service
+    restart: always
+    networks:
+      - fas
+    ports:
+      - "10001:10001"
+    volumes:
+      - ./data_management_service:/app
+
+networks:
+  fas:
