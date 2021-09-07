@@ -12,6 +12,8 @@ RUN pip install uvicorn
 RUN pip install pandas 
 RUN pip install requests
 RUN pip install schedule
+RUN pip install jinja2
+RUN pip install aiofiles
 
 WORKDIR /app
 CMD ["python3", "-u", "server.py"]
